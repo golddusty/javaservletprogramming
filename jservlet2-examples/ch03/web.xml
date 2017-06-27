@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+    <!-- From Example 3-3 -->
+    <servlet>
+        <servlet-name>
+            counter
+        </servlet-name>
+        <servlet-class>
+            InitCounter
+        </servlet-class>
+        <init-param>
+            <param-name>
+                initial
+            </param-name>
+            <param-value>
+                1000
+            </param-value>
+            <description>
+                The initial value for the counter  <!-- optional -->
+            </description>
+        </init-param>
+    </servlet>
+
+    <!-- From Example 3-8 -->
+    <servlet>
+        <servlet-name>
+            ps
+        </servlet-name>
+        <servlet-class>
+            PrimeSearcher
+        </servlet-class>
+        <load-on-startup/>
+    </servlet>
+
+    <!-- From Example 3-9 -->
+    <servlet>
+        <servlet-name>
+            first
+        </servlet-name>
+        <servlet-class>
+            First
+        </servlet-class>
+        <load-on-startup>10</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>
+            second
+        </servlet-name>
+        <servlet-class>
+            Second
+        </servlet-class>
+        <load-on-startup>20</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>
+            anytime
+        </servlet-name>
+        <servlet-class>
+            Anytime
+        </servlet-class>
+        <load-on-startup/>
+    </servlet>
+
+</web-app>

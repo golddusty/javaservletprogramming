@@ -1,0 +1,44 @@
+## snoop.wm
+
+#set $Response.ContentType = "text/html"
+
+<HTML><HEAD><TITLE>Let's Snoop!</TITLE></HEAD>
+<BODY>
+
+## A snoop template to get comfortable with WebMacro
+
+<H1>Miscellaneous Info</H1>
+QueryString: $Request.QueryString<BR>
+RemoteUser: $Request.RemoteUser<BR>
+
+## WebMacro does not yet recognize isXXX() properties; must use a method call
+## It doesn't currently have elseif either (it's being added)
+
+#if ($Request.isRequestedSessionIdFromCookie())  {
+  You're in a session thanks to cookies!
+}
+#else {
+  #if ($Request.isRequestedSessionIdFromURL()) {
+    You're in a session thanks to URL rewriting!
+  }
+  #else {
+    You're not in a session, poor guy.
+  }
+}
+
+<H1>Parameter Info</H1>
+#foreach $paramName in $Request.ParameterNames {
+  $paramName: $Request.getParameter($paramName) <BR>
+}
+
+<H1>Header Info</H1>
+#foreach $headerName in $Request.HeaderNames {
+  $headerName: $Request.getHeader($headerName) <BR>
+}
+
+<H1>Cookie Info</H1>
+#foreach $cookie in $Request.Cookies {
+  $cookie.Name: $cookie.Value <BR>
+}
+
+</BODY></HTML>

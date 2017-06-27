@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<tools>
+  <tool id="1">
+    <name>JavaServer Pages</name>
+    <homeURL>http://java.sun.com/products/jsp</homeURL>
+    <comments>
+      JavaServer Pages (JSP) is a technology created by Sun Microsystems 
+      and closely tied to servlets.  As with servlets, Sun releases a JSP 
+      specification, and third party vendors compete on their implementation 
+      of that standard.  Being released by Sun puts JSPs in a very privileged 
+      position, and had JSP solved a sufficient number of user problems it 
+      would probably have won the market before there were any other viable 
+      entries.  As is, a surprising number of users are disenchanted with JSP 
+      and alternatives are gaining popularity.
+    </comments>
+    <stateFlag>LIVE</stateFlag>
+    <createdTime>1998-03-17 00:00:00.000</createdTime>
+    <modifiedTime>1999-12-16 00:00:00.000</modifiedTime>
+  </tool>
+  <tool id="2">
+    <name>Tea</name>
+    <homeURL>http://opensource.go.com</homeURL>
+    <comments>
+      Tea is a newly open sourced product from the Walt Disney Internet Group,
+      created internally over the years to solve their tremendous web production
+      needs for sites such as ESPN.com.  It's similar to JSP although it avoids 
+      many of JSPs problems, and already has terrific tools support.
+    </comments>
+    <stateFlag>LIVE</stateFlag>
+    <createdTime>2000-07-12 00:00:00.000</createdTime>
+    <modifiedTime>2000-07-12 00:00:00.000</modifiedTime>
+  </tool>
+  <tool id="3">
+    <name>WebMacro</name>
+    <homeURL>http://jakarta.apache.org</homeURL>
+    <comments>
+      WebMacro is a template engine created by Semiotek as part of the Shimari
+      project and now merged into the Apache Jakarta Project.  WebMacro has 
+      been used on commercial sites such as AltaVista.com, has been integrated 
+      in open source frameworks such as Turbine and Melati, and has been used 
+      in prominent open source projects such as JetSpeed.
+    </comments>
+    <stateFlag>LIVE</stateFlag>
+    <createdTime>1998-11-19 00:00:00.000</createdTime>
+    <modifiedTime>2000-08-31 00:00:00.000</modifiedTime>
+  </tool>
+  <tool id="4">
+    <name>Element Construction Set</name>
+    <homeURL>http://java.apache.org/ecs</homeURL>
+    <comments>
+      The Element Construction Set (ECS) package from the Java Apache Project
+      is a set of classes modeled after the htmlKona product from WebLogic 
+      (now BEA Systems).  ECS has many limitations, but it solves a certain 
+      class of problems.
+    </comments>
+    <stateFlag>LIVE</stateFlag>
+    <createdTime>1999-03-31 00:00:00.000</createdTime>
+    <modifiedTime>2000-06-16 00:00:00.000</modifiedTime>
+  </tool>
+  <tool id="5">
+    <name>XMLC</name>
+    <homeURL>http://xmlc.enhydra.org</homeURL>
+    <comments>
+      XMLC makes use of XML to get nearly all the power of ECS without many of
+      its limitations.  It was created by Lutris as part of their Open Source 
+      Enhydra Application Server, and can be used as a separate component.
+    </comments>
+    <stateFlag>LIVE</stateFlag>
+    <createdTime>1998-10-11 00:00:00.000</createdTime>
+    <modifiedTime>2000-03-09 00:00:00.000</modifiedTime>
+  </tool>
+  <!-- etc -->
+</tools>

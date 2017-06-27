@@ -1,0 +1,13 @@
+<% template SimplePage(String name) %>
+This is a simple page that does nothing special
+except show a name: <% name %>
+<P>
+
+<%
+if (name == null) {
+  "You gave a null name"
+}
+if (name == "Slim Shady") {
+  "Please stand up"
+}
+%>

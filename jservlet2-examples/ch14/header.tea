@@ -1,0 +1,37 @@
+<% template header(String title, String deck, String desc) %>
+
+<HTML><HEAD><TITLE><% title %></TITLE></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="/images/background.gif"
+      LINK="#003333" ALINK="#669999" VLINK="#333333">
+
+<IMG SRC="/images/banner.gif" WIDTH=600 HEIGHT=87 BORDER=0><BR>
+
+<TABLE>
+<TR>
+<TD WIDTH=125 VALIGN=TOP>
+ <BR><BR><BR>
+ <FONT FACE="Arial,Helvetica" SIZE="+1" COLOR="#FF0000">
+ <A HREF="/index.html">Home</A><BR>
+ <A HREF="/hosting.html">Hosting</A><BR>
+ <A HREF="/engines.html">Engines</A><BR>
+ </FONT>
+</TD>
+
+<TD WIDTH=475>
+
+  <TABLE CELLPADDING=5><TR><TD WIDTH=600 BGCOLOR="#006699" VALIGN=TOP>
+  <B><FONT FACE="Arial,Helvetica" SIZE="+2">
+  <% title %>
+  </FONT></B>
+  </TD></TR></TABLE>
+
+  <B><FONT FACE="Arial,Helvetica" SIZE="+1" COLOR="#003366">
+  <% deck %>
+  </FONT></B><P>
+
+  <P>
+
+  <FONT FACE="Arial,Helvetica">
+
+  <% desc %>

@@ -1,0 +1,39 @@
+## toolview.wm
+
+#set $Response.ContentType = "text/html"
+
+#set $title = "Tool Listing"
+#set $deck = "A list of content creation tools"
+#set $desc = "Without tools, people are nothing more than animals.  And \
+              pretty weak ones at that.  Here's a list of servlet-based \
+              content creation tools you can use so you won't be a servlet \
+              weakling."
+
+#parse "header.wm"
+
+## Define a value to be read by the servlet
+#param $defaultState = "LIVE"
+
+#foreach $tool in $tools {
+
+  <HR SIZE=2 ALIGN=LEFT>
+
+  <H3>
+  $tool.Name
+
+  #if ($tool.isNewWithin(45)) {
+    <FONT COLOR=#FF0000><B> (New!) </B></FONT>
+  } 
+  #else {
+    #if ($tool.isUpdatedWithin(45)) {
+      <FONT COLOR=#ff0000><B> (Updated!) </B></FONT>
+    }
+  } 
+  </H3>
+  <A HREF="$tool.HomeURL">$tool.HomeURL</A><BR>
+
+  $tool.Comments
+
+}
+
+#parse "footer.wm"

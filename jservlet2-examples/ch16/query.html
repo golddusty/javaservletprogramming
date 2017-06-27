@@ -1,0 +1,51 @@
+<HTML><HEAD><TITLE>SQL Query</TITLE></HEAD><BODY>
+
+<P>
+  This application executes a SQL query or update
+  against any database on the public Internet.
+</P>
+
+<FORM METHOD="POST" ACTION="servlet/ResultSetServlet">
+  <TABLE WIDTH="75%" BORDER="1">
+    <TR>
+      <TD WIDTH="35%">Database URL:</TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="url" SIZE="60"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%">Database Driver:</TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="driver" SIZE="60"></TD>
+    </TR>
+    <TR>
+      <TD COLSPAN="2"><P ALIGN=CENTER> -- Database Properties -- </p></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%"><INPUT TYPE=TEXT NAME="prop1" VALUE="username"></TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="val1"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%"><INPUT TYPE=TEXT NAME="prop2" VALUE="password"></TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="val2"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%"><INPUT TYPE=TEXT NAME="prop3" VALUE="cacherows"></TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="val3"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%"><INPUT TYPE=TEXT NAME="prop4"></TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="val4"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%"><INPUT TYPE=TEXT NAME="prop5"></TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="val5"></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="35%"><INPUT TYPE=TEXT NAME="prop6"></TD>
+      <TD WIDTH="65%"><INPUT TYPE=TEXT NAME="val6"></TD>
+    </TR>
+  </TABLE>
+  <P>
+    <TEXTAREA NAME="sql" COLS="80" ROWS="5"></TEXTAREA>
+    <BR>
+    <INPUT TYPE=SUBMIT VALUE="Submit SQL">
+  </P>
+</FORM>

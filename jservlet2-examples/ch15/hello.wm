@@ -1,0 +1,12 @@
+## hello.wm
+
+#set $Response.ContentType = "text/html"
+
+<HTML><HEAD><TITLE>Testing WebMacro</TITLE></HEAD><BODY>
+
+Hello! <P>
+
+The current time is $date. <BR>
+(For you nerds, that's $date.Time milliseconds.) <P>
+
+</BODY></HTML>

@@ -1,0 +1,31 @@
+<% template toolview1(String state) %>
+
+<%
+  if (state == null) {
+    tools = getTools("live");
+  }
+  else {
+    tools = getTools(state)
+  }
+%>
+
+<% foreach (tool in tools) { %>
+
+  <HR SIZE=2 ALIGN=LEFT>
+
+  <H3>
+  <% tool.name %>
+  <%
+  if (tool.createdAgeInDays < 45) {
+    '<FONT COLOR=#FF0000><B> (New!) </B></FONT>'
+  }
+  else if (tool.modifiedAgeInDays < 45) {
+    '<FONT COLOR=#FF0000><B> (Updated!) </B></FONT>'
+  }
+  %>
+  </H3>
+  <A HREF="<% tool.homeURL %>"><% tool.homeURL %></A><BR>
+
+  <% tool.comments %>
+
+<% } %>

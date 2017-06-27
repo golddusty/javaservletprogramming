@@ -1,0 +1,5 @@
+<tomcat-users>
+  <user name="Dilbert"      password="dnrc"         roles="engineer" />
+  <user name="Wally"        password="iluvalice"    roles="engineer,slacker" />
+  <user name="MrPointyHair" password="MrPointyHair" roles="manager,slacker" />
+</tomcat-users>

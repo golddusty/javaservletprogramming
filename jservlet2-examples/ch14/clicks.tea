@@ -1,0 +1,21 @@
+<% template clicks() %>
+
+<HTML><HEAD><TITLE>Testing the Tea Built-In Functions</TITLE></HEAD><BODY>
+
+<%
+// Set the locale; it remains for all later template output
+setLocale("fr", "CA")  // Quebec
+
+// Specify how time and numbers should be formatted
+dateFormat("d MMMM yyyy")
+numberFormat("#0.00%")
+
+// Some fake data
+clicks = 485.0
+accesses = 7673.0
+%>
+
+<H2><% currentDate() %></H2>
+Le pourcentage: <% clicks/accesses %>
+
+</BODY></HTML>

@@ -1,0 +1,53 @@
+<% template Snoop() %>
+
+<HTML><HEAD><TITLE>Let's Snoop!</TITLE></HEAD><BODY>
+
+<% request = getRequest()  // Object type is implied %>
+
+<H1>Miscellaneous Info</H1>
+QueryString: <% request.queryString %> <BR>
+RemoteUser: <% request.remoteUser %> <BR>
+
+<H1>Parameter Info</H1>
+<%
+foreach (paramName in request.parameters.names) {
+  paramName ": " request.parameters[paramName] "<BR>"
+}
+%>
+
+<H1>Request Attribute Info</H1>
+<%
+foreach (attribName in request.attributes.names) {
+  attribName ': ' request.attributes[attribName] '<BR>'
+}
+%>
+
+
+<H1>Header Info</H1>
+<%
+foreach (headerName in request.headers.names) {
+  headerName ': ' request.headers[headerName] '<BR>'
+}
+%>
+
+<h1>Cookie Info</h1>
+<%
+foreach (cookie in request.cookies.all) {
+  cookie.name ': ' cookie.value '<BR>'
+}
+%>
+The session id cookie value is <% request.cookies["JSESSIONID"].value %>.
+
+<% // Some things we can't do in Tea... %>
+<%/*
+"<H1>Read from the User's Session</H1>"
+request.session["may"] = "work later"
+
+"<H1>Set an Attribute</H1>"
+request.attributes["will"] = "not work"
+
+"<H1>Set a Cookie</H1>"
+// Response manipulations are through application functions
+*/%>
+
+</BODY></HTML>

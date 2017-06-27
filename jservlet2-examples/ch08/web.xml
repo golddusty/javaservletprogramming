@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+    <servlet>
+        <servlet-name>
+            secret 
+        </servlet-name>
+        <servlet-class>
+            SalaryServer
+        </servlet-class>
+    </servlet>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>
+                SecretProtection
+            </web-resource-name>
+            <url-pattern>
+                /servlet/SalaryServer
+            </url-pattern>
+            <url-pattern>
+                /servlet/secret
+            </url-pattern>
+            <http-method>
+                GET
+            </http-method>
+            <http-method>
+                POST
+            </http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>
+                manager
+            </role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>
+            BASIC       <!-- BASIC, DIGEST, FORM, CLIENT-CERT -->
+        </auth-method>                                               
+        <realm-name>                                                 
+            Default     <!-- optional, only useful for BASIC -->     
+        </realm-name>                                                
+    </login-config>                                                  
+
+    <security-role>
+        <role-name>
+            manager
+        </role-name>
+    </security-role>
+</web-app>

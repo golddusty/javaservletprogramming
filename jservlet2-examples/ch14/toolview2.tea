@@ -1,0 +1,44 @@
+<% template toolview2(String state) %>
+
+<%
+    title = "Tool Listing"
+    deck = "A list of content creation tools"
+    desc = "Without tools, people are nothing more than animals.  And " &
+           "pretty weak ones at that.  Here's a list of servlet-based " &
+           "content creation tools you can use so you won't be a servlet " &
+           "weakling."
+%>
+
+<% call header(title, deck, desc) %>
+
+<%
+  if (state == null) {
+    tools = getTools("live");  // semi-colon is permitted but not required
+  }
+  else {
+    tools = getTools(state)
+  }
+%>
+
+<% foreach (tool in tools) { %>
+
+  <HR SIZE=2 ALIGN=LEFT>
+
+  <H3>
+  <% tool.name %>
+  <%
+  if (tool.createdAgeInDays < 45) {
+    '<FONT COLOR=#FF0000><B> (New!) </B></FONT>'
+  }
+  else if (tool.modifiedAgeInDays < 45) {
+    '<FONT COLOR=#FF0000><B> (Updated!) </B></FONT>'
+  }
+  %>
+  </H3>
+  <A HREF="<% tool.homeURL %>"><% tool.homeURL %></A><BR>
+
+  <% tool.comments %>
+
+<% } %>
+
+<% call footer() %>
